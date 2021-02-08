@@ -9,16 +9,13 @@ namespace Tests
 {
     public class Test
     {
+
         // A Test behaves as an ordinary method
         [Test]
         //Spikes
         [TestCase(2,3, false)]
         [TestCase(5,3, true)]
         [TestCase(3,3,false)]
-        ////LowLevelEnemy
-        //[TestCase(12,2)]
-        ////HighLevelEnemy
-        //[TestCase(30,3)]
         public void ShootEnemy(int numberOfShotsEnemyTakes, int typeOfEnemy, bool isEnemySupposedToBeDead)
         {
             //Arrange
@@ -29,7 +26,6 @@ namespace Tests
             Enemies.IEnemy enemy = Substitute.For<Enemies.IEnemy>();
             enemy.enemyLife.Returns(10);
             enemy.typeOfEnemy.Returns(typeOfEnemy);
-
             int initLife = 10;
 
             //Act

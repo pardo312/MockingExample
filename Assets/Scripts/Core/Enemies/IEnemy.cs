@@ -8,7 +8,7 @@ namespace Enemies
     {
         int typeOfEnemy { get;}
         int enemyLife { get; set; }
-        void actOnCollisionWithPlayer(GameObject player);
+        void actOnCollisionWithPlayer(GameObject player,int dañoRecibido);
         void ObstacleDie();
     }
 }

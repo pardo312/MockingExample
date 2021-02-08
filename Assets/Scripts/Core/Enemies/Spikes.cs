@@ -27,14 +27,14 @@ namespace Enemies
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                actOnCollisionWithPlayer(other.gameObject);
+                actOnCollisionWithPlayer(other.gameObject,10);
             }
         }
 
-        public void actOnCollisionWithPlayer(GameObject player)
+        public void actOnCollisionWithPlayer(GameObject player,int dañoRecibido)
         {
             Status playerStatus = player.GetComponent<Status>();
-            playerStatus.life -= 10;
+            playerStatus.life -= dañoRecibido;
         }
         public void ObstacleDie()
         {
